@@ -33,10 +33,24 @@
 
         <h3>Featured Video</h3>
 
-        <video width="600" controls>
-            <source src="plants.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <section class="video-section">
+    <h2>Learn the Basics of Plant Care</h2>
+    <p>Watch this quick guide to master watering, lighting, and soil fundamentals.</p>
+    
+    <!-- Responsive Video Container -->
+    <div class="video-container">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/BZnXw9O8Scc" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
 
         <p>
             Watch our 5-second introduction to Leaf & Loom.
@@ -48,12 +62,22 @@
     <!-- Gallery Section -->
     <section id="gallery">
         <h2>Plant Gallery</h2>
+<!-- Plant Card 1: Monstera -->
+<div class="plant-card">
+    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQSMc0ItNzhLtkn_JYahTww-XFLUq9BjYeG6LXshl-kCRfXxrSpBwNY6g7nfNqbEqhVRxC_N9OirA6aKVA" alt="Lush green Monstera Deliciosa houseplant in a white pot" class="product-img">
+    <h3>Monstera Deliciosa</h3>
+    <p class="price">KSh 1,500</p>
+    <button class="cta-btn">Add to Cart</button>
+</div>
 
-        <img src="plant1.jpg" alt="Monstera Plant" width="250">
-        <img src="plant2.jpg" alt="Snake Plant" width="250">
-        <img src="plant3.jpg" alt="Peace Lily" width="250">
-        <img src="plant4.jpg" alt="Pothos Plant" width="250">
-        <img src="plant5.jpg" alt="Areca Palm" width="250">
+<!-- Plant Card 2: Snake Plant -->
+<div class="plant-card">
+    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSgbrs7Nz-kCUMa-PL3k8HIVOIHyQAYG2wir9yWNyMbpoTF3F6Cz9TIl6hXaq5Qoo3bhP_C-c4pzJmXpa4" alt="Snake Plant in a white ceramic planter" class="product-img">
+    <h3>Snake Plant</h3>
+    <p class="price">KSh 1,200</p>
+    <button class="cta-btn">Add to Cart</button>
+</div>
+
 
         <hr>
     </section>
