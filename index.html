@@ -1,161 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaf & Loom - Indoor Plant Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leaf & Loom</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f766e,#14b8a6);
+    color:white;
+}
+
+header{
+    background:rgba(0,0,0,0.2);
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#bbf7d0;
+}
+
+.hero{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+section{
+    padding:40px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.gallery img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.video-container{
+    display:flex;
+    justify-content:center;
+}
+
+video{
+    width:700px;
+    max-width:100%;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    color:black;
+    width:280px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.card p{
+    padding:0 10px 10px;
+}
+
+button{
+    margin:10px;
+    padding:10px 20px;
+    border:none;
+    background:#0f766e;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#115e59;
+}
+
+.tips{
+    background:rgba(255,255,255,0.1);
+    border-radius:15px;
+    padding:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.2);
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>🌿 Leaf & Loom</h1>
-        <p>Bringing Nature Into Your Home</p>
+<header>
+    <h1>🌿 Leaf & Loom</h1>
+    <p>Bringing Nature Into Your Home</p>
 
-        <nav>
-            <a href="#home">Home</a> |
-            <a href="#gallery">Gallery</a> |
-            <a href="#shop">Shop</a> |
-            <a href="#care">Care Tips</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-        <hr>
-    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#video">Video</a>
+        <a href="#shop">Shop</a>
+        <a href="#tips">Care Tips</a>
+    </nav>
+</header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h2>Welcome to Leaf & Loom</h2>
+<section class="hero" id="home">
+    <h2>Beautiful Indoor Plants</h2>
 
-        <p>
-            Explore our collection of beautiful indoor plants and learn
-            how to keep them healthy and thriving.
-        </p>
-
-        <h3>Featured Video</h3>
-
-        <section class="video-section">
-    <h2>Learn the Basics of Plant Care</h2>
-    <p>Watch this quick guide to master watering, lighting, and soil fundamentals.</p>
-    
-    <!-- Responsive Video Container -->
-    <div class="video-container">
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/BZnXw9O8Scc" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
+    <p>
+        Discover stunning indoor plants that transform your living
+        space into a green paradise.
+    </p>
 </section>
 
+<section id="gallery">
 
-        <p>
-            Watch our 5-second introduction to Leaf & Loom.
-        </p>
+    <h2>Plant Gallery</h2>
 
-        <hr>
-    </section>
+    <div class="gallery">
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Plant Gallery</h2>
-<!-- Plant Card 1: Monstera -->
-<div class="plant-card">
-    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQSMc0ItNzhLtkn_JYahTww-XFLUq9BjYeG6LXshl-kCRfXxrSpBwNY6g7nfNqbEqhVRxC_N9OirA6aKVA" alt="Lush green Monstera Deliciosa houseplant in a white pot" class="product-img">
-    <h3>Monstera Deliciosa</h3>
-    <p class="price">KSh 1,500</p>
-    <button class="cta-btn">Add to Cart</button>
+        <img src="plant1.jpg" alt="Plant 1">
+        <img src="plant2.jpg" alt="Plant 2">
+        <img src="plant3.jpg" alt="Plant 3">
+        <img src="plant4.jpg" alt="Plant 4">
+        <img src="plant5.jpg" alt="Plant 5">
+
+    </div>
+
+</section>
+
+<section id="video">
+
+    <h2>Our Plants In Action</h2>
+
+    <div class="video-container">
+
+        <video controls>
+            <source src="plants.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+
+</section>
+
+<section id="shop">
+
+<h2>Shop Our Collection</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="plant1.jpg" alt="">
+<h3>Monstera Deliciosa</h3>
+<p>Large tropical leaves perfect for modern homes.</p>
+<button>View Product</button>
 </div>
 
-<!-- Plant Card 2: Snake Plant -->
-<div class="plant-card">
-    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSgbrs7Nz-kCUMa-PL3k8HIVOIHyQAYG2wir9yWNyMbpoTF3F6Cz9TIl6hXaq5Qoo3bhP_C-c4pzJmXpa4" alt="Snake Plant in a white ceramic planter" class="product-img">
-    <h3>Snake Plant</h3>
-    <p class="price">KSh 1,200</p>
-    <button class="cta-btn">Add to Cart</button>
+<div class="card">
+<img src="plant2.jpg" alt="">
+<h3>Snake Plant</h3>
+<p>Low maintenance and beginner friendly.</p>
+<button>View Product</button>
 </div>
 
+<div class="card">
+<img src="plant3.jpg" alt="">
+<h3>Peace Lily</h3>
+<p>Elegant flowering indoor plant.</p>
+<button>View Product</button>
+</div>
 
-        <hr>
-    </section>
+<div class="card">
+<img src="plant4.jpg" alt="">
+<h3>Pothos</h3>
+<p>Fast-growing trailing plant.</p>
+<button>View Product</button>
+</div>
 
-    <!-- Shop Section -->
-    <section id="shop">
-        <h2>Shop Our Plants</h2>
+<div class="card">
+<img src="plant5.jpg" alt="">
+<h3>Areca Palm</h3>
+<p>Pet-friendly tropical beauty.</p>
+<button>View Product</button>
+</div>
 
-        <article>
-            <h3>Monstera Deliciosa</h3>
-            <img src="plant1.jpg" alt="Monstera" width="200">
-            <p>Large tropical leaves that brighten any room.</p>
-            <button>View Product</button>
-        </article>
+</div>
 
-        <article>
-            <h3>Snake Plant</h3>
-            <img src="plant2.jpg" alt="Snake Plant" width="200">
-            <p>Perfect for beginners and low-light spaces.</p>
-            <button>View Product</button>
-        </article>
+</section>
 
-        <article>
-            <h3>Peace Lily</h3>
-            <img src="plant3.jpg" alt="Peace Lily" width="200">
-            <p>Elegant plant known for its white flowers.</p>
-            <button>View Product</button>
-        </article>
+<section id="tips">
 
-        <hr>
-    </section>
+<h2>Plant Care Tips</h2>
 
-    <!-- Care Tips -->
-    <section id="care">
-        <h2>Plant Care Tips</h2>
+<div class="tips">
 
-        <h3>How Not to Kill a Monstera</h3>
-        <p>
-            Keep your monstera in bright indirect light and avoid
-            overwatering.
-        </p>
+<h3>How Not To Kill A Monstera</h3>
+<p>
+Keep it in bright indirect light and water when the top soil feels dry.
+</p>
 
-        <h3>Watering Guide</h3>
-        <p>
-            Check soil moisture before watering to prevent root rot.
-        </p>
+<br>
 
-        <h3>Choosing the Right Plant</h3>
-        <p>
-            Consider sunlight, room size, and pet safety before purchasing.
-        </p>
+<h3>Watering Basics</h3>
+<p>
+Overwatering is the number one cause of plant death. Always check the soil first.
+</p>
 
-        <hr>
-    </section>
+<br>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Us</h2>
+<h3>Choosing The Right Spot</h3>
+<p>
+Different plants need different amounts of light. Read plant labels carefully.
+</p>
 
-        <form>
-            <label>Name:</label><br>
-            <input type="text"><br><br>
+</div>
 
-            <label>Email:</label><br>
-            <input type="email"><br><br>
+</section>
 
-            <label>Message:</label><br>
-            <textarea rows="5" cols="30"></textarea><br><br>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 Leaf & Loom. All Rights Reserved.</p>
-    </footer>
+<footer>
+<p>© 2026 Leaf & Loom | Indoor Plant Shop</p>
+</footer>
 
 </body>
 </html>
