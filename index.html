@@ -3,44 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Leaf & Loom</title>
 
 <style>
 
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial;
     background:linear-gradient(135deg,#0f766e,#14b8a6);
     color:white;
 }
 
-/* HEADER */
 header{
     text-align:center;
     padding:20px;
     background:rgba(0,0,0,0.3);
 }
 
-header h1{
-    font-size:2.8rem;
-    margin:0;
-}
-
 nav a{
     color:white;
-    margin:0 10px;
+    margin:10px;
     text-decoration:none;
     font-weight:bold;
 }
 
-/* HERO */
 .hero{
     text-align:center;
     padding:30px;
 }
 
-/* GALLERY */
 .gallery{
     display:flex;
     flex-wrap:wrap;
@@ -54,23 +45,20 @@ nav a{
     height:200px;
     object-fit:cover;
     border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* VIDEO */
-.video-box{
+.video{
     display:flex;
     justify-content:center;
     padding:20px;
 }
 
 video{
-    width:90%;
+    width:80%;
     max-width:600px;
     border-radius:12px;
 }
 
-/* TABLE */
 table{
     width:90%;
     margin:auto;
@@ -78,48 +66,10 @@ table{
     background:rgba(255,255,255,0.15);
 }
 
-th, td{
-    padding:12px;
+th,td{
+    padding:10px;
+    text-align:center;
     border:1px solid rgba(255,255,255,0.3);
-    text-align:center;
-}
-
-th{
-    background:rgba(0,0,0,0.3);
-}
-
-/* SHOP */
-.shop{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-    padding:20px;
-}
-
-.card{
-    background:white;
-    color:black;
-    width:200px;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-.card img{
-    width:100%;
-    height:150px;
-    object-fit:cover;
-}
-
-.card p{
-    padding:5px;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:15px;
-    background:rgba(0,0,0,0.3);
 }
 
 </style>
@@ -129,124 +79,59 @@ footer{
 
 <header>
 <h1>🌿 Leaf & Loom</h1>
-<p>Indoor Plant Shop</p>
-
 <nav>
 <a href="#gallery">Gallery</a>
 <a href="#video">Video</a>
-<a href="#shop">Shop</a>
 <a href="#prices">Prices</a>
 </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-<h2>Bring Nature Home 🌱</h2>
-<p>Simple indoor plants for your space</p>
-</section>
+<div class="hero">
+<h2>Indoor Plant Shop</h2>
+<p>Fresh plants for your space 🌱</p>
+</div>
 
-<!-- GALLERY -->
+<!-- GALLERY (WORKING IMAGES) -->
 <section id="gallery">
 <h2 style="text-align:center;">Gallery</h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" width="300">
-<img src="plant2.jpg" alt="Plant 2">
-<img src="plant3.jpg" alt="Plant 3">
-<img src="plant4.jpg" alt="Plant 4">
-<img src="plant5.jpg" alt="Plant 5">
+<img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07">
+<img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+<img src="https://images.unsplash.com/photo-1524594227084-6c4b1c3b9c3f">
+<img src="https://images.unsplash.com/photo-1509423350716-97f2360af0b5">
 
 </div>
 </section>
 
-<!-- VIDEO -->
+<!-- VIDEO (WORKING ONLINE VIDEO) -->
 <section id="video">
-<h2 style="text-align:center;">5 Second Video</h2>
+<h2 style="text-align:center;">Plant Video</h2>
 
-<div class="video-box">
+<div class="video">
 <video controls>
-    <source src="plants.mp4" type="video/mp4">
-    Your browser cannot load this video.
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
 </video>
 </div>
+
 </section>
 
-<!-- SHOP -->
-<section id="shop">
-<h2 style="text-align:center;">Shop</h2>
-
-<div class="shop">
-
-<div class="card">
-<img src="plant1.jpg">
-<p>Monstera</p>
-</div>
-
-<div class="card">
-<img src="plant2.jpg">
-<p>Snake Plant</p>
-</div>
-
-<div class="card">
-<img src="plant3.jpg">
-<p>Peace Lily</p>
-</div>
-
-<div class="card">
-<img src="plant4.jpg">
-<p>Pothos</p>
-</div>
-
-<div class="card">
-<img src="plant5.jpg">
-<p>Areca Palm</p>
-</div>
-
-</div>
-</section>
-
-<!-- PRICES -->
+<!-- PRICE TABLE -->
 <section id="prices">
 <h2 style="text-align:center;">Price Table</h2>
 
 <table>
-<tr>
-<th>Plant</th>
-<th>Price (Ksh)</th>
-</tr>
-
-<tr>
-<td>Monstera</td>
-<td>1200</td>
-</tr>
-
-<tr>
-<td>Snake Plant</td>
-<td>800</td>
-</tr>
-
-<tr>
-<td>Peace Lily</td>
-<td>1000</td>
-</tr>
-
-<tr>
-<td>Pothos</td>
-<td>700</td>
-</tr>
-
-<tr>
-<td>Areca Palm</td>
-<td>1500</td>
-</tr>
-
+<tr><th>Plant</th><th>Price (Ksh)</th></tr>
+<tr><td>Monstera</td><td>1200</td></tr>
+<tr><td>Snake Plant</td><td>800</td></tr>
+<tr><td>Peace Lily</td><td>1000</td></tr>
+<tr><td>Pothos</td><td>700</td></tr>
+<tr><td>Areca Palm</td><td>1500</td></tr>
 </table>
-</section>
 
-<footer>
-<p>© 2026 Leaf & Loom</p>
-</footer>
+</section>
 
 </body>
 </html>
