@@ -14,6 +14,7 @@ body{
     color:white;
 }
 
+/* HEADER */
 header{
     text-align:center;
     padding:20px;
@@ -27,30 +28,34 @@ nav a{
     font-weight:bold;
 }
 
-.hero{
-    text-align:center;
+/* SECTIONS */
+section{
     padding:30px;
 }
 
+h2{
+    text-align:center;
+}
+
+/* GALLERY */
 .gallery{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:15px;
-    padding:20px;
 }
 
 .gallery img{
-    width:200px;
-    height:200px;
+    width:180px;
+    height:180px;
     object-fit:cover;
     border-radius:12px;
 }
 
+/* VIDEO */
 .video{
     display:flex;
     justify-content:center;
-    padding:20px;
 }
 
 video{
@@ -59,6 +64,30 @@ video{
     border-radius:12px;
 }
 
+/* SHOP */
+.shop{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.card{
+    background:white;
+    color:black;
+    width:180px;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+}
+
+/* TABLE */
 table{
     width:90%;
     margin:auto;
@@ -68,8 +97,31 @@ table{
 
 th,td{
     padding:10px;
-    text-align:center;
     border:1px solid rgba(255,255,255,0.3);
+    text-align:center;
+}
+
+/* CONTACT */
+form{
+    width:80%;
+    max-width:400px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input, textarea{
+    padding:10px;
+    border:none;
+    border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    background:rgba(0,0,0,0.3);
 }
 
 </style>
@@ -79,48 +131,78 @@ th,td{
 
 <header>
 <h1>🌿 Leaf & Loom</h1>
+
 <nav>
 <a href="#gallery">Gallery</a>
 <a href="#video">Video</a>
+<a href="#shop">Shop</a>
 <a href="#prices">Prices</a>
+<a href="#contact">Contact</a>
 </nav>
 </header>
 
-<div class="hero">
-<h2>Indoor Plant Shop</h2>
-<p>Fresh plants for your space 🌱</p>
-</div>
+<!-- HERO -->
+<section>
+<h2>Indoor Plant Shop 🌱</h2>
+<p style="text-align:center;">Fresh plants for your home</p>
+</section>
 
-<!-- GALLERY (WORKING IMAGES) -->
+<!-- GALLERY -->
 <section id="gallery">
-<h2 style="text-align:center;">Gallery</h2>
+<h2>Gallery</h2>
 
 <div class="gallery">
-
 <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07">
 <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a">
 <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
 <img src="https://images.unsplash.com/photo-1524594227084-6c4b1c3b9c3f">
 <img src="https://images.unsplash.com/photo-1509423350716-97f2360af0b5">
-
 </div>
 </section>
 
-<!-- VIDEO (WORKING ONLINE VIDEO) -->
+<!-- VIDEO -->
 <section id="video">
-<h2 style="text-align:center;">Plant Video</h2>
+<h2>Video</h2>
 
 <div class="video">
 <video controls>
-<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">
 </video>
 </div>
-
 </section>
 
-<!-- PRICE TABLE -->
+<!-- SHOP -->
+<section id="shop">
+<h2>Shop</h2>
+
+<div class="shop">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07">
+<p>Monstera</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a">
+<p>Snake Plant</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+<p>Peace Lily</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524594227084-6c4b1c3b9c3f">
+<p>Pothos</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRICES -->
 <section id="prices">
-<h2 style="text-align:center;">Price Table</h2>
+<h2>Price Table</h2>
 
 <table>
 <tr><th>Plant</th><th>Price (Ksh)</th></tr>
@@ -128,10 +210,25 @@ th,td{
 <tr><td>Snake Plant</td><td>800</td></tr>
 <tr><td>Peace Lily</td><td>1000</td></tr>
 <tr><td>Pothos</td><td>700</td></tr>
-<tr><td>Areca Palm</td><td>1500</td></tr>
 </table>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button type="submit">Send</button>
+</form>
 
 </section>
+
+<footer>
+<p>© 2026 Leaf & Loom</p>
+</footer>
 
 </body>
 </html>
