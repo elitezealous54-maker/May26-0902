@@ -949,41 +949,8 @@ function closePopup(){
 }
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<script>
-const SUPABASE_URL = "YOUR_PROJECT_URL";
-const SUPABASE_KEY = "YOUR_PUBLISHABLE_KEY";
 
-const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
-);
-
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const { error } = await supabaseClient
-        .from("contact_messages")
-        .insert({
-            first_name: document.getElementById("firstName").value,
-            last_name: document.getElementById("lastName").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            message: document.getElementById("message").value
-        });
-
-    if (error) {
-        alert("Error sending message.");
-        console.error(error);
-    } else {
-        alert("Your message has been sent successfully! 🌿");
-        form.reset();
-    }
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
