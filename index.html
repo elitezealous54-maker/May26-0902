@@ -994,6 +994,37 @@ const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
+   <script>
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const { error } = await supabaseClient
+        .from("contact_messages")
+        .insert({
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone: phone,
+            message: message
+        });
+
+    if (error) {
+        console.error(error);
+        alert("Message could not be sent.");
+    } else {
+        alert("Message sent successfully! 🌿");
+        document.getElementById("contactForm").reset();
+    }
+
+});
+
 </script>
 </body>
 
