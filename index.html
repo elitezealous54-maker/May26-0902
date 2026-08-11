@@ -940,20 +940,11 @@ footer{
      POPUP JAVASCRIPT
 ========================= -->
 
-<script>
-
-function closePopup(){
-
-    document.getElementById("discountPopup").style.display = "none";
-
-}
-
-</script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
-const SUPABASE_URL = "https://litzgyqsaisknfbmnumz";
+
+const SUPABASE_URL = "https://litzgyqsaisknfbmnumz.supabase.co";
 const SUPABASE_KEY = "sb_publishable_puwP3iF-rHEO_RdvbxQCKA_aJpDBbQM";
 
 const supabaseClient = window.supabase.createClient(
@@ -961,35 +952,51 @@ const supabaseClient = window.supabase.createClient(
     SUPABASE_KEY
 );
 
-document.getElementById("contactForm").addEventListener("submit", async function(event) {
+console.log("SUPABASE LOADED");
 
-    event.preventDefault();
+const form = document.getElementById("contactForm");
 
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
+if (!form) {
 
-    const { error } = await supabaseClient
-        .from("contact_messages")
-        .insert({
-            first_name: firstName,
-            last_name: lastName,
-            email: email,
-            phone: phone,
-            message: message
-        });
+    console.error("CONTACT FORM NOT FOUND");
 
-    if (error) {
-        console.error(error);
-        alert("Message could not be sent.");
-    } else {
-        alert("Message sent successfully! 🌿");
-        document.getElementById("contactForm").reset();
-    }
+} else {
 
-});
+    console.log("CONTACT FORM FOUND");
+
+    form.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+        console.log("SEND BUTTON PRESSED");
+
+        const { error } = await supabaseClient
+            .from("contact_messages")
+            .insert({
+                first_name: document.getElementById("firstName").value,
+                last_name: document.getElementById("lastName").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                message: document.getElementById("message").value
+            });
+
+        if (error) {
+
+            console.error("SUPABASE ERROR:", error);
+            alert("Supabase error: " + error.message);
+
+        } else {
+
+            console.log("MESSAGE SENT");
+            alert("Message sent successfully! 🌿");
+
+            form.reset();
+
+        }
+
+    });
+
+}
 
 </script>
 </body>
